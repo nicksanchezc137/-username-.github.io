@@ -176,13 +176,24 @@ export default class Contact extends React.Component {
           style={{
             position: "fixed",
             bottom: 20,
-            right: 20
+            right: 20,
+            zIndex:1000
           }}
         >
           {this.state.showChat ? (
             <ThemeProvider theme={theme}>
               <ChatBot 
+              botAvatar = "https://www.synaptive.com/img/fb-chatbot-icon.png"
               handleEnd={this.handleEnd}
+              headerTitle = "Talk to me"
+              // headerComponent = {
+              //  <div style = {{
+              //    height:50,
+              //    flexDirection:"row",
+              //    backgroundColor:"#061B3D"}}>
+              //    <span>Talk to me</span>
+              //     <button style = {{color:"#fff"}}>X</button>
+              // </div>}
               steps={steps} />
             </ThemeProvider>
           ) : (
